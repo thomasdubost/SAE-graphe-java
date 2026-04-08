@@ -39,12 +39,12 @@ class TestGraphe {
 	
 	@Test
 	void TestGraphe1() {
-		assertTrue(TesterGraphe(new Graphe1()));
+		assertTrue(TesterGraphe(new GrapheMatrice()));
 		
 	}
 	@Test
 	void TestGraphe2() {
-		assertTrue(TesterGraphe(new Graphe2()));
+		assertTrue(TesterGraphe(new GrapheListeAdjacence()));
 	}
 
 }

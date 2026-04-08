@@ -9,11 +9,11 @@ class NoeudExistantException extends RuntimeException {
 	}
 }
 record Edge(String label) {};
-// Graphe avec l'implémentation d'une matrice d'adjacense
-public class Graphe1 implements IGraphe{
+// Graphe avec l'implémentation d'une matrice d'adjacence
+public class GrapheMatrice implements IGraphe{
 	private ArrayList<ArrayList<Edge>> matrix;
 	private ArrayList<String> nodes;
-	public Graphe1() {
+	public GrapheMatrice() {
 		this.matrix = new ArrayList<ArrayList<Edge>>();
 		this.nodes = new ArrayList<String>();
 	}

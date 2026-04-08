@@ -2,7 +2,7 @@ package graphe;
 
 public class AppliGraphe2 {
 	public static void main(String[] args) {
-		Graphe2 g = new Graphe2();
+		GrapheListeAdjacence g = new GrapheListeAdjacence();
 		g.add_node("ALLO");
 		g.add_node("BONJOUR");
 		g.add_node("SALUT");

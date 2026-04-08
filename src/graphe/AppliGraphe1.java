@@ -2,7 +2,7 @@ package graphe;
 
 public class AppliGraphe1 {
 	public static void main(String[] args) {
-		Graphe1 g = new Graphe1();
+		GrapheMatrice g = new GrapheMatrice();
 		g.add_node("ALLO");
 		g.add_node("BONJOUR");
 		g.add_node("SALUT");

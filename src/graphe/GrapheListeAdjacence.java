@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 
 // Graphe avec l'implémentation de liste d'adjacence
-public class Graphe2 implements IGraphe{
+public class GrapheListeAdjacence implements IGraphe{
 	private HashMap<String, ArrayList<String[]>> edges;
-	public Graphe2() {
+	public GrapheListeAdjacence() {
 		this.edges = new HashMap<String, ArrayList<String[]>>();
 	}
 	public void add_node(String node) {
