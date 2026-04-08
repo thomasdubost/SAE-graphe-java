@@ -2,13 +2,15 @@ package graphe;
 
 import java.util.ArrayList;
 class NoeudExistantException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
+
 	public NoeudExistantException(String msg) {
 		super(msg);
 	}
 }
 record Edge(String label) {};
 // Graphe avec l'implémentation d'une matrice d'adjacense
-public class Graphe1 {
+public class Graphe1 implements IGraphe{
 	private ArrayList<ArrayList<Edge>> matrix;
 	private ArrayList<String> nodes;
 	public Graphe1() {
@@ -52,7 +54,7 @@ public class Graphe1 {
 		return this.nodes.contains(node);
 	}
 	public ArrayList<String> nodes(){
-		return (ArrayList<String>) this.nodes.clone(); // SHALLOW COPY
+		return this.nodes; // SHALLOW COPY
 	}
 	public ArrayList<ArrayList<String>> edges(){
 		ArrayList<ArrayList<String>> edges = new ArrayList<ArrayList<String>>();
