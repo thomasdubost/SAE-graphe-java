@@ -12,12 +12,22 @@ public class GrapheListeAdjacence implements IGraphe{
 		this.edges = new HashMap<String, ArrayList<String[]>>();
 	}
 	public void add_node(String node) {
+		if (!this.edges.containsKey(node)) {
+			throw new graphe.exception.NoeudExistantException(node);
+		}
 		this.edges.put(node, new ArrayList<String[]>());
 	}
 	public void add_edge(String a_node,String b_node,String label) {
 		this.edges.get(a_node).add(new String[] {b_node,label});
 	}
 	public void add_edge(String a_node,String b_node) {
+		if (!this.edges.containsKey(a_node)) {
+			throw new graphe.exception.NoeudInexistantException(a_node);
+		}
+		if (!this.edges.containsKey(b_node)) {
+			throw new graphe.exception.NoeudInexistantException(b_node);
+		}
+		
 		add_edge(a_node, b_node,null);
 	}
 	public ArrayList<String> nodes(){
