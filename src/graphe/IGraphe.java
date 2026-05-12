@@ -2,9 +2,6 @@ package graphe;
 
 import java.util.Set;
 
-/**
- * Interface du graphe pour la SAE.
- */
 public interface IGraphe {
     /**
      * Ajoute une entité au graphe.
